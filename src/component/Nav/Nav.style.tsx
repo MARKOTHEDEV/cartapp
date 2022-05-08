@@ -1,12 +1,12 @@
 
 import styled from "styled-components"
 
-
+import { NavLinkPropType } from "./NavTypes"
 
 
 export const NavContainer = styled.nav`
 /* border: 1px solid red; */
-padding: 1rem .6rem;
+padding: .8rem 1.5rem;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -14,29 +14,64 @@ background-color: ${({theme})=>theme.colors.neutral.white};
 `
 export const NavLogoContainer = styled.div`
 /* border: 1px solid red; */
-width: 52%;
+width: 54%;
 /* align-items: center; */
 position: relative;
 display: flex;
 justify-content: space-between;
 align-items: center;
-svg{
+div{
+
     color: ${({theme})=>theme.colors.neutral.blackOpacity};
-    font-size: 1.6rem;  
-    position:absolute;
-    top: 25%;
-    left: 0;
+    /* border: 1px solid red; */
+    width: 19.4833px;
+    transform: translateY(4px);
     &:hover{
         cursor: pointer;
     }
+    img{
+        width: 100%;
+        height: 100%;
+    }
 }
 h2{
+    /* border: 1px solid blue; */
     font-size: 2rem;
-    color:  ${({theme})=>theme.colors.neutral.blackOpacity};
+    color:  ${({theme})=>theme.colors.neutral.veryVarkBlue};
 }
 `
-export const NavLinks = styled.div`
-display: none;
+export const NavLinks = styled.div<NavLinkPropType>`
+position: fixed;
+/* border: 1px solid yellow; */
+top: 0;
+left: 0;
+height: 100%;
+width: 50%;
+background-color: white;
+padding: 1.5rem;
+/* position: relative; */
+${ (props)=>props.hamburger?"transform: translateX(0);":"transform: translateX(-100%);"}
+transition: all .4s ease-in-out;
+
+ul{
+    /* border: 1px solid red; */
+
+    height: 100%;
+
+    div{
+        margin-bottom:2rem;
+        cursor: pointer;
+    }
+}
+li{
+    list-style-type: none;
+    padding: .7rem 0;
+}
+a{
+    color:  ${({theme})=>theme.colors.neutral.veryVarkBlue};
+    text-decoration: none;
+    font-weight: 700;
+}
 `
 
 
