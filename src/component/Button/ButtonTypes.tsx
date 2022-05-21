@@ -8,4 +8,5 @@ export interface ButtonType{
     icon?:React.ReactElement;
     label:string;
     styles?:ButtonStyleType;
+    isLoading?:boolean;
 }

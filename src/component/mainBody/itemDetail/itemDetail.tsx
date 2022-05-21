@@ -52,7 +52,6 @@ const ItemDetail = () =>{
                 <Button 
                  icon={<BsCart3 />} 
                  label="Add to cart"
-                 
                  />
             </div>
         </ItemDetailContainer>
