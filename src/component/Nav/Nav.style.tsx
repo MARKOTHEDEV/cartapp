@@ -87,7 +87,7 @@ padding: 1.5rem;
 /* position: relative; */
 ${ (props)=>props.hamburger?"transform: translateX(0);":"transform: translateX(-100%);"}
 transition: all .4s ease-in-out;
-
+z-index: 40;
 ul{
     /* border: 1px solid red; */
 
