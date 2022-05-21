@@ -1,5 +1,5 @@
 import {AiOutlineShoppingCart } from "react-icons/ai"
-import {NavContainer,
+import {NavContainer,NavLinkAndNavLogoContainer,
 NavLogoContainer,NavLinks,UserImageContainer,UserPersonalNavInfoContainer,UserImage
 } from "./Nav.style"
 import userImageSrc from "../../asset/image-avatar.png" ;
@@ -10,29 +10,34 @@ const Nav = ()=>{
     const [hamburger,setHamburger]=useState(false)
     return (
         <NavContainer>
-            <NavLogoContainer>
-            <div onClick={(e)=>setHamburger(true)}>
-                <img src={menuIcon} alt="menu bar" />
-            </div>
-                <h2>
-                    sneakers
-                </h2>
-                
-            </NavLogoContainer>
+            <NavLinkAndNavLogoContainer>
 
-            <NavLinks hamburger={hamburger}>
-                   <ul>
-                    <div onClick={(e)=>setHamburger(false)}>
-                        <img src={menuIconClose} alt="" />
-                    </div>
-                    <li><a href="">Collections</a></li>
-                        <li><a href="">Men</a></li>
-                        <li><a href="">Women</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
-                   </ul>
-                
-            </NavLinks>
+                    <NavLogoContainer>
+                        <div onClick={(e)=>setHamburger(true)}>
+                            <img src={menuIcon} alt="menu bar" />
+                        </div>
+                            <h2>
+                                sneakers
+                            </h2>
+                            
+                        </NavLogoContainer>
+
+                        <NavLinks hamburger={hamburger}>
+                            <ul>
+                                <div onClick={(e)=>setHamburger(false)}>
+                                    <img src={menuIconClose} alt="" />
+                                </div>
+                                <li><a href="">Collections</a></li>
+                                    <li><a href="">Men</a></li>
+                                    <li><a href="">Women</a></li>
+                                    <li><a href="">About</a></li>
+                                    <li><a href="">Contact</a></li>
+                            </ul>
+                            
+                        </NavLinks>
+
+            </NavLinkAndNavLogoContainer>
+
 
             <UserPersonalNavInfoContainer>
                     {/* cart icon */}
