@@ -2,7 +2,7 @@ const Theme={
 
     "colors":{
         "primary":{
-            "orange":" hsl(26, 100%, 55%)",
+            "orange":" #ff7d1a",
             "paleOrange":"hsl(25, 100%, 94%)",
         },
         "neutral":{

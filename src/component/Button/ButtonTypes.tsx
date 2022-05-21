@@ -5,7 +5,7 @@ export interface ButtonStyleType{
 }
 
 export interface ButtonType{
-    icon?:React.ComponentType;
+    icon?:React.ReactElement;
     label:string;
     styles?:ButtonStyleType;
 }

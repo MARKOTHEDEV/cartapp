@@ -3,13 +3,12 @@ import {ButtonStyle} from "./button.style"
 import {ButtonType} from "./ButtonTypes"
 
 
-
-const Button:React.FC<ButtonType> =({label="Click me",styles,...rest})=>{
+const Button:React.FC<ButtonType> =({label="Click me",icon,styles,...rest})=>{
 
 
   return (
     <ButtonStyle  {...styles} {...rest}>
-      {label}
+      <>{icon}</> {label}
     </ButtonStyle>
   )
 }

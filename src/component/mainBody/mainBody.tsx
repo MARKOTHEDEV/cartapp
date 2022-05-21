@@ -1,3 +1,4 @@
+import ItemDetail from "./itemDetail/itemDetail"
 import ItemImagePreview from "./ItemImagePreview/ItemImagePreview"
 
 const MainBody = ()=>{
@@ -9,7 +10,7 @@ const MainBody = ()=>{
         <br />
         <ItemImagePreview />
 
-        
+        <ItemDetail />
         </>
     )
 }
