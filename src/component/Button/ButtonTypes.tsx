@@ -1,7 +1,6 @@
 export interface ButtonStyleType{
-    size?:'fw'|"md";
+    width?:string;
     isLoading?:boolean;
-
 }
 
 export interface ButtonType{
@@ -9,4 +8,5 @@ export interface ButtonType{
     label:string;
     styles?:ButtonStyleType;
     isLoading?:boolean;
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }

@@ -2,12 +2,14 @@ import {TiMinus,TiPlus} from "react-icons/ti"
 import {
     ItemCounterContainer,Number
 }from "./ItemCounter.style"
-const ItemCounter = ()=>{
+import {ItemCounterContainerType} from "./ItemCounter.type"
+
+const ItemCounter:React.FC<ItemCounterContainerType> = (props,...rest)=>{
 
 
 
     return (
-       <ItemCounterContainer>
+       <ItemCounterContainer width={props.width}>
 
            <TiPlus />
 

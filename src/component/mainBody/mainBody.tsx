@@ -1,6 +1,6 @@
 import ItemDetail from "./itemDetail/itemDetail"
 import ItemImagePreview from "./ItemImagePreview/ItemImagePreview"
-
+import {MainBodyContainer} from "./mainBody.style"
 const MainBody = ()=>{
 
 
@@ -8,9 +8,12 @@ const MainBody = ()=>{
     return (
         <>
         <br />
-        <ItemImagePreview />
+        <MainBodyContainer>
+            <ItemImagePreview />
+            <ItemDetail />
 
-        <ItemDetail />
+        </MainBodyContainer>
+
         </>
     )
 }

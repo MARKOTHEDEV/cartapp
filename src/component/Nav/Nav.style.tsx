@@ -167,11 +167,27 @@ svg{
     color: ${({theme})=>theme.colors.neutral.darkGrayishBlue};
 }
 `
+export const CartShoppingContainer = styled.div`
+    position: relative;
+    cursor: pointer;
+    p{
+        position: absolute;
+        top: 0;
+        font-size: .5rem;
+        right: -5px;
+        color: white;
+        background-color: ${({theme})=>theme.colors.primary.orange};
+        padding: 0 .3rem;
+        border-radius: 50%;
+        
+    }
+`
 export const UserImageContainer = styled.div`
 /* border: 3px dotted  ${({theme})=>theme.colors.primary.orange};*/
 width:30px;
 height: 30px;
 border-radius: 50%;
+position: relative;
 &:active{
     border: 1px solid  ${({theme})=>theme.colors.primary.orange};
 }

@@ -9,6 +9,14 @@ export const ItemDetailContainer = styled.div`
         h1{
             padding: .6rem 0;
         }
+
+        @media screen  and (min-width:900px){
+                width: 50%;
+            }
+
+            @media screen  and (min-width:1000px){
+                width: 50%;
+            }
 `
 
 

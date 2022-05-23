@@ -7,12 +7,14 @@ import {
 } from "./itemDetail.style"
 
 import {BsCart3 } from "react-icons/bs" 
-
+import { useMediaQuery } from 'react-responsive'
 
 const ItemDetail = () =>{
 
-
-
+    const NotMobile = useMediaQuery({
+        query: '(min-width: 900px)'
+      })
+ 
     return (
         <ItemDetailContainer>
             <SmallHeading>
@@ -45,13 +47,17 @@ const ItemDetail = () =>{
             </PricingContainer>
         <br />
         <br />
-            <div>
+            <div style={{"display":NotMobile?"flex":"block","justifyContent":"space-between","alignItems":"center"}}>
 
-                <ItemCounter />
+                <ItemCounter
+                width={NotMobile?"35%":"100%"}
+                />
                 <br />
                 <Button 
                  icon={<BsCart3 />} 
                  label="Add to cart"
+                 styles={{"width":NotMobile?"60%":"100%"}}
+                //  isLoading={true}
                  />
             </div>
         </ItemDetailContainer>

@@ -11,6 +11,7 @@ opacity: ${(props)=>props.isLoading?".7":"1"};
 border:transparent ;
 display: block;
 width: 100%;
+${(props)=>props.width?"width:"+props.width+";":""}
 border-radius: 10px;
 padding: 1rem ;
 font-size: 1rem;

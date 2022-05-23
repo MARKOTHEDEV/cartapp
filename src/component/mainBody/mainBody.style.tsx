@@ -1,6 +1,25 @@
-import style  from "styled-components"
+import styled from "styled-components"
 
 
 
 
-// const 
+
+
+export const MainBodyContainer = styled.div`
+    @media screen  and (min-width:900px){
+        display: flex;
+        justify-content: space-between;
+        /* justify-content: space-around; */
+        padding: 0 2rem;
+        align-items: center;
+
+        max-width: 900px;
+        margin: 0 auto;
+        /* border: 1px solid red; */
+    }
+    @media screen  and (min-width:900px){
+        padding: 0;
+        max-width: 950px;
+
+    }
+`

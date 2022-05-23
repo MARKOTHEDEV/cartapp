@@ -1,11 +1,12 @@
 import {AiOutlineShoppingCart } from "react-icons/ai"
-import {NavContainer,NavLinkAndNavLogoContainer,
+import {NavContainer,NavLinkAndNavLogoContainer,CartShoppingContainer,
 NavLogoContainer,NavLinks,UserImageContainer,UserPersonalNavInfoContainer,UserImage
 } from "./Nav.style"
 import userImageSrc from "../../asset/image-avatar.png" ;
 import menuIcon from "../../asset/icon-menu.svg";
 import menuIconClose from "../../asset/icon-close.svg";
 import { useState } from "react";
+import CartCard from "../CartCard/CartCard";
 const Nav = ()=>{
     const [hamburger,setHamburger]=useState(false)
     return (
@@ -41,10 +42,14 @@ const Nav = ()=>{
 
             <UserPersonalNavInfoContainer>
                     {/* cart icon */}
+                    <CartShoppingContainer>
                     <AiOutlineShoppingCart/>
+                        <p>5</p>
+                    </CartShoppingContainer>
                     {/* this the Container that holds the image */}
                     <UserImageContainer>
                         <UserImage src={userImageSrc}/>
+                        {/* <CartCard /> */}
                     </UserImageContainer>
             </UserPersonalNavInfoContainer>
         </NavContainer>
