@@ -106,6 +106,7 @@ a{
     color:  ${({theme})=>theme.colors.neutral.veryVarkBlue};
     text-decoration: none;
     font-weight: 700;
+
 }
 
 
@@ -131,8 +132,29 @@ width: 80%;
     }
     a{
     font-weight: 100;
+    position: relative;
     color: gray;
+        &:hover{
+            color: black;
 
+        
+        }
+      }
+
+      a::after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 100%;
+        height: 15%;
+        bottom: -200%;
+        transform: translate(-50%, -50%);
+        /* border: 1px solid red; */
+        background-color:transparent;
+        transition:   background-color .4s ease-in-out;
+    }
+    a:hover::after{
+        background-color: ${({theme})=>theme.colors.primary.orange};
     }
 }
 
