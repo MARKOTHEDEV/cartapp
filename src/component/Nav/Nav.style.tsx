@@ -21,7 +21,7 @@ position: relative;
 padding: .8rem 0;
 margin: 0 auto;
 width: 70%;
-
+margin-bottom: 40px;
 
     &::after{
     content: "";

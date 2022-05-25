@@ -9,13 +9,17 @@ import RightIcon from "../../../asset/icon-next.svg";
 import {BiChevronLeft} from "react-icons/bi"
 import {BiChevronRight} from "react-icons/bi"
 // import thumbnail1 from ""
-const ItemImagePreview = ()=>{
+const ItemImagePreview:React.FC<{openModalPic?:()=>void}> = ({openModalPic})=>{
 
 
     return(
         <Container>
             <MainImageContainer>
-                <img  src={ShoeMainPics} alt="" />
+                <img  src={ShoeMainPics} alt="" onClick={()=>{
+                    if(openModalPic){
+                        openModalPic()
+                    }
+                }} />
 
                 <PreviewBoxContainer>
                     <BiChevronRight/>
@@ -34,7 +38,7 @@ const ItemImagePreview = ()=>{
                 </ThunbNail>
                 ))}
                 
-            </ThumbNailImageContainer>
+            </ThumbNailImageContainer>  
         </Container>
     )
 }

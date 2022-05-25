@@ -17,9 +17,4 @@ export const MainBodyContainer = styled.div`
         margin: 0 auto;
         /* border: 1px solid red; */
     }
-    @media screen  and (min-width:900px){
-        padding: 0;
-        max-width: 950px;
-
-    }
 `

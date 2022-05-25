@@ -44,6 +44,10 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 
+@media screen and (min-width: 800px) {
+    flex-direction: column;
+    align-items: unset;
+}
 `
 
 export const ActualPriceAndPricePercent =styled.div`
@@ -67,6 +71,12 @@ export const CrossedPrice = styled.p`
 /* border: 1px solid blue; */
 color: ${({theme})=>theme.colors.neutral.darkGrayishBlue};
 font-weight: 500;
+
+
+
+@media screen  and (min-width: 800px){
+    padding-top: 6px;
+}
 
 `
 // export const SmallHeading = styled.h3``
