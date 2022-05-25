@@ -6,9 +6,10 @@ import userImageSrc from "../../asset/image-avatar.png" ;
 import menuIcon from "../../asset/icon-menu.svg";
 import menuIconClose from "../../asset/icon-close.svg";
 import { useState } from "react";
-import CartCard from "../CartCard/CartCard";
+import CartCardNav from "../CartCard/CartCard";
 const Nav = ()=>{
     const [hamburger,setHamburger]=useState(false)
+    const [showCartNav,setShowCartNav] = useState(false)
     return (
         <NavContainer>
             <NavLinkAndNavLogoContainer>
@@ -43,15 +44,26 @@ const Nav = ()=>{
             <UserPersonalNavInfoContainer>
                     {/* cart icon */}
                     <CartShoppingContainer>
-                    <AiOutlineShoppingCart/>
+                    <AiOutlineShoppingCart     onClick={(e)=>setShowCartNav(!showCartNav)}/>
                         <p>5</p>
                     </CartShoppingContainer>
                     {/* this the Container that holds the image */}
-                    <UserImageContainer>
-                        <UserImage src={userImageSrc}/>
-                        {/* <CartCard /> */}
+                    <UserImageContainer 
+                  
+                    isActive={showCartNav}
+                    >
+                        <UserImage src={userImageSrc} />
                     </UserImageContainer>
             </UserPersonalNavInfoContainer>
+
+           {/* this component show the current Cart State */}
+           {
+               showCartNav?
+               <CartCardNav /> 
+          :""
+            }
+            
+        
         </NavContainer>
     )
 }

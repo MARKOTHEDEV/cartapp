@@ -1,7 +1,7 @@
 
 import styled from "styled-components"
 
-import { NavLinkPropType } from "./NavTypes"
+import { NavLinkPropType,UserImageContainerType } from "./NavTypes"
 
 
 export const NavContainer = styled.nav`
@@ -204,7 +204,7 @@ export const CartShoppingContainer = styled.div`
         
     }
 `
-export const UserImageContainer = styled.div`
+export const UserImageContainer = styled.div<UserImageContainerType>`
 /* border: 3px dotted  ${({theme})=>theme.colors.primary.orange};*/
 width:30px;
 height: 30px;
@@ -213,6 +213,7 @@ position: relative;
 &:active{
     border: 1px solid  ${({theme})=>theme.colors.primary.orange};
 }
+${(props)=>props.isActive?`border: 1px solid ${props.theme.colors.primary.orange};`:""}
 
 @media screen and (min-width: 700px) {
     width:50px;
