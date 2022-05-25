@@ -8,8 +8,10 @@ import LeftIcon from "../../../asset/icon-previous.svg";
 import RightIcon from "../../../asset/icon-next.svg";
 import {BiChevronLeft} from "react-icons/bi"
 import {BiChevronRight} from "react-icons/bi"
-// import thumbnail1 from ""
-const ItemImagePreview:React.FC<{openModalPic?:()=>void}> = ({openModalPic})=>{
+import { ItemImagePreviewType } from "./ItemImagePreview.type";
+
+
+const ItemImagePreview:React.FC<ItemImagePreviewType> = ({openModalPic,isInModalState=false})=>{
 
 
     return(
@@ -21,7 +23,7 @@ const ItemImagePreview:React.FC<{openModalPic?:()=>void}> = ({openModalPic})=>{
                     }
                 }} />
 
-                <PreviewBoxContainer>
+                <PreviewBoxContainer isInModalState={isInModalState}>
                     <BiChevronRight/>
 
                     <BiChevronLeft/>

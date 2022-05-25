@@ -13,7 +13,7 @@ const MainBody = ()=>{
         <CustomModal
             modalIsOpen={modalIsOpen}
             setModalIsOpen={setModalIsOpen}
-            element={<ItemImagePreview />}
+            element={<ItemImagePreview isInModalState={true}/>}
             />
         <MainBodyContainer>
             <ItemImagePreview  openModalPic={()=>setModalIsOpen(true)} />

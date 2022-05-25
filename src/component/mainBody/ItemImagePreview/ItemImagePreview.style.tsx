@@ -1,5 +1,5 @@
 import styled,{css} from "styled-components"
-
+import {PreviewBoxContainerType} from "./ItemImagePreview.type"
 
 export const MakeImageFitpage= css`
  width: 100%;
@@ -67,7 +67,7 @@ img{
 }
 `
 
-export const PreviewBoxContainer = styled.div`
+export const PreviewBoxContainer = styled.div<PreviewBoxContainerType>`
  position:absolute ;
  top: 40%;
  left: 0;
@@ -77,6 +77,22 @@ export const PreviewBoxContainer = styled.div`
  flex-direction: row-reverse;
  justify-content: space-between;
  padding: 0 .5rem;
+
+ ${(props)=>{
+     let newStyle =""
+     if(props.isInModalState){
+         newStyle =`
+            top: 40%;
+            left: -20px;
+            width: 112%;
+         `
+     }
+
+
+     return newStyle
+ }
+
+}
 
 
 svg{
