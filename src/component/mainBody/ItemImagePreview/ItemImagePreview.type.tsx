@@ -9,3 +9,9 @@ export interface ItemImagePreviewType {
 export interface PreviewBoxContainerType{
     isInModalState?:boolean;
 }
+
+
+
+export interface ThunbNailType{
+    currentItem:number;   
+}

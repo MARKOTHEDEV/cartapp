@@ -1,5 +1,6 @@
 import styled,{css} from "styled-components"
-import {PreviewBoxContainerType} from "./ItemImagePreview.type"
+import {PreviewBoxContainerType,ThunbNailType
+} from "./ItemImagePreview.type"
 
 export const MakeImageFitpage= css`
  width: 100%;
@@ -38,7 +39,7 @@ display: none;
     justify-content: space-between;
 }
 `
-export const ThunbNail = styled.div`
+export const ThunbNail = styled.div<ThunbNailType>`
 width: 20%;
 border-radius:10px ;
 
@@ -57,7 +58,7 @@ img{
     
     
 }
-&:nth-child(3){
+&:nth-child(${(props)=>props.currentItem}){
     /* for */
     border: 2px solid ${({theme})=>theme.colors.primary.orange};
     img{
