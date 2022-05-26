@@ -17,6 +17,9 @@ svg{
 color: ${({theme})=>theme.colors.primary.orange};
 font-weight: 700;
 font-size: 1.5rem;
+ &:hover{
+     cursor: pointer;
+ }
 }
 `
 export const Number = styled.div``

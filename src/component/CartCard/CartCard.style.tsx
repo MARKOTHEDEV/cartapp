@@ -16,6 +16,8 @@ export const CartCardNavContainer =styled.div`
         /* margin: 0 auto; */
         transform: translateX(20px) ;
         max-width: 369px;
+        max-height: 400px;
+        overflow-y: scroll;
         @media screen and (min-width: 701px){
             right: 0;
             transform: translateX(0) ;

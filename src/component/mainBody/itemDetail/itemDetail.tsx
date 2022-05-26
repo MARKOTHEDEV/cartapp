@@ -8,13 +8,17 @@ import {
 
 import {BsCart3 } from "react-icons/bs" 
 import { useMediaQuery } from 'react-responsive'
+import { useState,useContext } from "react"
+import { AppContext } from "../../../Context/AppContext"
 
 const ItemDetail = () =>{
 
     const NotMobile = useMediaQuery({
         query: '(min-width: 900px)'
       })
- 
+      const { cartState,userCartState } = useContext(AppContext)
+      const {cart,setCart } = cartState
+      const {userCartList,setUserCartList} = userCartState
     return (
         <ItemDetailContainer>
             <SmallHeading>
@@ -31,7 +35,10 @@ const ItemDetail = () =>{
             <PricingContainer>
                 <ActualPriceAndPricePercent>
                     <ActualPrice>
-                        $125.00
+                        {/* $125.00 */}
+                        {
+                            (cart.actual_price*cart.qty_num).toFixed(2)
+                        }
                     </ActualPrice>
                     <PricePercent>
                         <strong>50%</strong>
@@ -57,6 +64,11 @@ const ItemDetail = () =>{
                  icon={<BsCart3 />} 
                  label="Add to cart"
                  styles={{"width":NotMobile?"60%":"100%"}}
+                 onClick={(e)=>setUserCartList([...userCartList,{
+                     "name":"wow",
+                     "price": (cart.actual_price*cart.qty_num).toFixed(2),
+                     "id":userCartList.length+3
+                 }])}
                 //  isLoading={true}
                  />
             </div>
