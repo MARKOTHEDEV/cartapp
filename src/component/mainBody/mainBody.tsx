@@ -15,6 +15,12 @@ const MainBody = ()=>{
     const AvoidCartPopOnMobile = useMediaQuery({
         query: '(min-width: 900px)'
       })
+    const handleOpenModal = ()=>{
+        if(AvoidCartPopOnMobile){
+            //this means when it on mobile dont pop up use the arrow
+            setModalIsOpen(true)
+        }
+    }
     return (
         <>        
         <br />
@@ -24,12 +30,7 @@ const MainBody = ()=>{
             element={<ItemImagePreview isInModalState={true}/>}
             />
         <MainBodyContainer>
-            <ItemImagePreview  openModalPic={()=>{
-                if(AvoidCartPopOnMobile){
-                    //this means when it on mobile dont pop up use the arrow
-                    setModalIsOpen(true)
-                }
-                }} />
+            <ItemImagePreview  openModalPic={handleOpenModal} />
             <ItemDetail />
 
         </MainBodyContainer>
