@@ -10,7 +10,17 @@ const CartCardNav =()=>{
     const [isEmpty,setIsEmpty] = useState(true)
     const { userCartState } = useContext(AppContext) 
     const {userCartList,setUserCartList } = userCartState
- 
+    
+    const handleDeleteCart = (currentItemId:number)=>{
+        setUserCartList(userCartList.filter(data=>{
+
+            return currentItemId !== data.id
+        }))
+    }
+
+    const handleClearCart = ()=>{
+        setUserCartList([])
+    }
     return (
         <CartCardNavContainer>
         <Header>
@@ -40,14 +50,7 @@ const CartCardNav =()=>{
                              <p>$125.00 x3 <strong>${currentItem.price}</strong></p>
                              </Content>
                              
-                             <RiDeleteBin5Line onClick={(e)=>{
-// userCartList,setUserCartList
-
-setUserCartList(userCartList.filter(data=>{
-
-    return currentItem.id !== data.id
-}))
-                             }}/>
+                             <RiDeleteBin5Line onClick={(e)=>handleDeleteCart(currentItem.id)}/>
                              
                              </Item>
                           ))
@@ -56,7 +59,7 @@ setUserCartList(userCartList.filter(data=>{
                 
             </ItemContainer>
 
-            <Button label="Checkout" onClick={(e)=>setUserCartList([])}/>
+            <Button label="Checkout" onClick={handleClearCart}/>
                 </>
             }
           

@@ -15,9 +15,6 @@ const MainBody = ()=>{
     const AvoidCartPopOnMobile = useMediaQuery({
         query: '(min-width: 900px)'
       })
-      console.log({
-        AvoidCartPopOnMobile
-      })
     return (
         <>        
         <br />

@@ -20,26 +20,24 @@ const ItemCounter:React.FC<ItemCounterContainerType> = (props,...rest)=>{
     const { cartState } = useContext(AppContext)
     const {cart,setCart } = cartState
 
+
+    const handleIncrement = ()=>setCart({...cart,"qty_num":cart.qty_num+1})
+    const handleDecrement = ()=>{
+        if(cart.qty_num >=2){
+            setCart({...cart,"qty_num":cart.qty_num-1})
+     }
+    }
+
     return (
        <ItemCounterContainer width={props.width}>
 
-           <TiPlus   onClick={(e)=>{
-            setCart({...cart,"qty_num":cart.qty_num+1})
-     console.log("click")
-     }} 
-           />
+           <TiPlus   onClick={handleIncrement}/>
 
            <Number>
                {cart.qty_num}
            </Number>
 
-           <TiMinus
-            onClick={(e)=>{
-                if(cart.qty_num >=2){
-                       setCart({...cart,"qty_num":cart.qty_num-1})
-                }
-            }} 
-           />
+           <TiMinus onClick={handleDecrement}/>
 
        </ItemCounterContainer> 
     )

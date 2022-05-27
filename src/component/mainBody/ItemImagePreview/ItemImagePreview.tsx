@@ -32,9 +32,7 @@ export interface ThunbNailType{
 const ItemImagePreview:React.FC<ItemImagePreviewType> = ({openModalPic,isInModalState=false})=>{
     
     const [slideIndex, setSlideIndex] = useState(1)
-    // console.log({"big l":process.env.PUBLIC_URL})
-    const  MAX_PICS =4//let not lie to out self i aready know the amount of image am dealing with );
-
+    const  MAX_PICS =4;
     const nextSlide = () => {
         if(slideIndex !==MAX_PICS){
             setSlideIndex(slideIndex + 1)

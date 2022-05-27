@@ -19,6 +19,14 @@ const ItemDetail = () =>{
       const { cartState,userCartState } = useContext(AppContext)
       const {cart,setCart } = cartState
       const {userCartList,setUserCartList} = userCartState
+
+      const handleAddTOCart = ()=>{
+        setUserCartList([...userCartList,{
+            "name":"wow",
+            "price": (cart.actual_price*cart.qty_num).toFixed(2),
+            "id":userCartList.length+3
+        }])
+      }
     return (
         <ItemDetailContainer>
             <SmallHeading>
@@ -64,11 +72,7 @@ const ItemDetail = () =>{
                  icon={<BsCart3 />} 
                  label="Add to cart"
                  styles={{"width":NotMobile?"60%":"100%"}}
-                 onClick={(e)=>setUserCartList([...userCartList,{
-                     "name":"wow",
-                     "price": (cart.actual_price*cart.qty_num).toFixed(2),
-                     "id":userCartList.length+3
-                 }])}
+                 onClick={handleAddTOCart}
                 //  isLoading={true}
                  />
             </div>

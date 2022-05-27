@@ -21,7 +21,7 @@ const Button:React.FC<ButtonType> =({label="Click me",isLoading=false,icon,style
     <ButtonStyle isLoading={isLoading} {...styles} {...rest}>
 {isLoading?
 "Loading...":<>
-<>{icon}</> {label}
+{icon} {label}
 </>
 }
       
