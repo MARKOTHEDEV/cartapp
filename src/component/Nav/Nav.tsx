@@ -9,6 +9,19 @@ import { useState } from "react";
 import CartCardNav from "../CartCard/CartCard";
 import { useContext } from "react";
 import { AppContext } from "../../Context/AppContext";
+
+
+export interface NavLinkPropType{
+
+    hamburger:boolean;
+}
+
+export interface UserImageContainerType{
+
+    isActive:boolean;
+}
+
+
 const Nav = ()=>{
     const [hamburger,setHamburger]=useState(false)
     const [showCartNav,setShowCartNav] = useState(false)

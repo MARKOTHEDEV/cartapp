@@ -1,10 +1,17 @@
 import {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import { CustomModalType } from './Modal.type';
 import {
   MdClose
 } from "react-icons/md";
+
+
+export interface CustomModalType{
+  modalIsOpen:boolean;
+  setModalIsOpen:(value:boolean)=>void,
+  element:React.ReactElement,
+}
+
 
 const customStyles = {
   content: {

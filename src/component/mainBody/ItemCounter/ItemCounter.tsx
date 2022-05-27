@@ -2,14 +2,19 @@ import {TiMinus,TiPlus} from "react-icons/ti"
 import {
     ItemCounterContainer,Number
 }from "./ItemCounter.style"
-import {ItemCounterContainerType} from "./ItemCounter.type"
 import { useState,useContext } from "react"
 import { AppContext } from "../../../Context/AppContext"
 import {
     cartType,
     userCartType,
-  } from "../../../App.type"
+  } from "../../../App"
   
+
+
+
+export interface ItemCounterContainerType{
+width?:string;
+}
 const ItemCounter:React.FC<ItemCounterContainerType> = (props,...rest)=>{
 
     const { cartState } = useContext(AppContext)

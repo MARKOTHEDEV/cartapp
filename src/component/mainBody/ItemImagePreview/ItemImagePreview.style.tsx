@@ -1,6 +1,6 @@
 import styled,{css} from "styled-components"
 import {PreviewBoxContainerType,ThunbNailType
-} from "./ItemImagePreview.type"
+} from "./ItemImagePreview"
 
 export const MakeImageFitpage= css`
  width: 100%;

@@ -2,11 +2,19 @@ import React, { useState } from 'react';
 import MainBody from './component/mainBody/mainBody';
 import Nav from './component/Nav/Nav';
 import {AppContext} from "./Context/AppContext";
-import {
-  cartType,
-  userCartType,
-} from "./App.type"
 
+export interface cartType{
+  "actual_price":number;
+  "qty_num":number;
+}
+
+
+
+export interface userCartType{
+  "name":string;    
+  "price":number|string;
+  "id":number;
+}
 
 function App() {
 

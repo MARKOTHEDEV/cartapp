@@ -1,7 +1,7 @@
 
 import styled from "styled-components"
 
-import { NavLinkPropType,UserImageContainerType } from "./NavTypes"
+import { NavLinkPropType,UserImageContainerType } from "./Nav"
 
 
 export const NavContainer = styled.nav`

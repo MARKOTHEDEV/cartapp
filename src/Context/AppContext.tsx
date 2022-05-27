@@ -1,5 +1,5 @@
 import {createContext} from "react";
-import {cartType,userCartType} from "../App.type"
+import {cartType,userCartType} from "../App"
 
 interface AppcontextType{
 "cartState":{

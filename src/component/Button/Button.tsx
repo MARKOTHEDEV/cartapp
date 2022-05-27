@@ -1,6 +1,19 @@
 import React from 'react';
 import {ButtonStyle} from "./button.style"
-import {ButtonType} from "./ButtonTypes"
+
+
+export interface ButtonStyleType{
+    width?:string;
+    isLoading?:boolean;
+}
+
+export interface ButtonType{
+    icon?:React.ReactElement;
+    label:string;
+    styles?:ButtonStyleType;
+    isLoading?:boolean;
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
 const Button:React.FC<ButtonType> =({label="Click me",isLoading=false,icon,styles,...rest})=>{
 
 

@@ -9,8 +9,25 @@ import LeftIcon from "../../../asset/icon-previous.svg";
 import RightIcon from "../../../asset/icon-next.svg";
 import {BiChevronLeft} from "react-icons/bi"
 import {BiChevronRight} from "react-icons/bi"
-import { ItemImagePreviewType } from "./ItemImagePreview.type";
 
+
+
+
+
+export interface ItemImagePreviewType {
+    openModalPic?:()=>void;
+    isInModalState?:boolean;
+}
+
+export interface PreviewBoxContainerType{
+    isInModalState?:boolean;
+}
+
+
+
+export interface ThunbNailType{
+    currentItem:number;   
+}
 
 const ItemImagePreview:React.FC<ItemImagePreviewType> = ({openModalPic,isInModalState=false})=>{
     

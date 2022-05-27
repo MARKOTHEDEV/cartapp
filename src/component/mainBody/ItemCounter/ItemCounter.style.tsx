@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {ItemCounterContainerType} from "./ItemCounter.type"
+import {ItemCounterContainerType} from "./ItemCounter"
 
 
 export const ItemCounterContainer = styled.div<ItemCounterContainerType>`

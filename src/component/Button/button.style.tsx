@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {ButtonStyleType} from "./ButtonTypes"
+import {ButtonStyleType} from "./Button"
 
 
 
