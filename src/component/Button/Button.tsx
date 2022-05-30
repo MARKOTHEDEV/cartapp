@@ -1,5 +1,5 @@
 import React from 'react';
-import {ButtonStyle} from "./button.style"
+import {ButtonStyle} from './button.style'
 
 
 export interface ButtonStyleType{
@@ -14,13 +14,13 @@ export interface ButtonType{
     isLoading?:boolean;
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
-const Button:React.FC<ButtonType> =({label="Click me",isLoading=false,icon,styles,...rest})=>{
+const Button:React.FC<ButtonType> =({label='Click me',isLoading=false,icon,styles,...rest})=>{
 
 
   return (
     <ButtonStyle isLoading={isLoading} {...styles} {...rest}>
 {isLoading?
-"Loading...":<>
+'Loading...':<>
 {icon} {label}
 </>
 }

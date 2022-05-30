@@ -1,14 +1,14 @@
-import {AiOutlineShoppingCart } from "react-icons/ai"
+import {AiOutlineShoppingCart } from 'react-icons/ai'
 import {NavContainer,NavLinkAndNavLogoContainer,CartShoppingContainer,
 NavLogoContainer,NavLinks,UserImageContainer,UserPersonalNavInfoContainer,UserImage
-} from "./Nav.style"
-import userImageSrc from "../../asset/image-avatar.png" ;
-import menuIcon from "../../asset/icon-menu.svg";
-import menuIconClose from "../../asset/icon-close.svg";
-import { useState } from "react";
-import CartCardNav from "../CartCard/CartCard";
-import { useContext } from "react";
-import { AppContext } from "../../Context/AppContext";
+} from './Nav.style'
+import userImageSrc from '../../asset/image-avatar.png' ;
+import menuIcon from '../../asset/icon-menu.svg';
+import menuIconClose from '../../asset/icon-close.svg';
+import { useState } from 'react';
+import CartCardNav from '../CartCard/CartCard';
+import { useContext } from 'react';
+import { AppContext } from '../../Context/AppContext';
 
 
 export interface NavLinkPropType{
@@ -33,7 +33,7 @@ const Nav = ()=>{
             <NavLinkAndNavLogoContainer>
 
                     <NavLogoContainer>
-                        <div onClick={(e)=>setHamburger(true)}>
+                        <div onClick={()=>setHamburger(true)}>
                             <img src={menuIcon} alt="menu bar" />
                         </div>
                             <h2>
@@ -44,7 +44,7 @@ const Nav = ()=>{
 
                         <NavLinks hamburger={hamburger}>
                             <ul>
-                                <div onClick={(e)=>setHamburger(false)}>
+                                <div onClick={()=>setHamburger(false)}>
                                     <img src={menuIconClose} alt="" />
                                 </div>
                                 <li><a href="#">Collections</a></li>
@@ -62,7 +62,7 @@ const Nav = ()=>{
             <UserPersonalNavInfoContainer>
                     {/* cart icon */}
                     <CartShoppingContainer>
-                    <AiOutlineShoppingCart     onClick={(e)=>setShowCartNav(!showCartNav)}/>
+                    <AiOutlineShoppingCart     onClick={()=>setShowCartNav(!showCartNav)}/>
                         <p>{userCartState.userCartList.length}</p>
                     </CartShoppingContainer>
                     {/* this the Container that holds the image */}
@@ -78,7 +78,7 @@ const Nav = ()=>{
            {
                showCartNav?
                <CartCardNav /> 
-          :""
+          :''
             }
             
         

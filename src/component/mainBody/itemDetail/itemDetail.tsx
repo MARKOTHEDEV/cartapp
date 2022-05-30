@@ -1,15 +1,15 @@
-import Button from "../../Button/Button"
-import ItemCounter from "../ItemCounter/ItemCounter"
+import Button from '../../Button/Button'
+import ItemCounter from '../ItemCounter/ItemCounter'
 import {
     SmallHeading,Content,
     PricingContainer,ActualPrice,
     PricePercent,CrossedPrice,ItemDetailContainer,ActualPriceAndPricePercent
-} from "./itemDetail.style"
+} from './itemDetail.style'
 
-import {BsCart3 } from "react-icons/bs" 
+import {BsCart3 } from 'react-icons/bs' 
 import { useMediaQuery } from 'react-responsive'
-import { useState,useContext } from "react"
-import { AppContext } from "../../../Context/AppContext"
+import { useContext } from 'react'
+import { AppContext } from '../../../Context/AppContext'
 
 const ItemDetail = () =>{
 
@@ -17,14 +17,14 @@ const ItemDetail = () =>{
         query: '(min-width: 900px)'
       })
       const { cartState,userCartState } = useContext(AppContext)
-      const {cart,setCart } = cartState
+      const {cart } = cartState
       const {userCartList,setUserCartList} = userCartState
 
       const handleAddTOCart = ()=>{
         setUserCartList([...userCartList,{
-            "name":"wow",
-            "price": (cart.actual_price*cart.qty_num).toFixed(2),
-            "id":userCartList.length+3
+            'name':'wow',
+            'price': (cart.actual_price*cart.qty_num).toFixed(2),
+            'id':userCartList.length+3
         }])
       }
     return (
@@ -36,7 +36,7 @@ const ItemDetail = () =>{
             <h1>Fall Limited Edition Sneakers</h1>
 
             <Content>
-                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'ill withstand everything
+                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they ill withstand everything
                 the weather can offer.
             </Content>
 <br />
@@ -62,16 +62,16 @@ const ItemDetail = () =>{
             </PricingContainer>
         <br />
         <br />
-            <div style={{"display":NotMobile?"flex":"block","justifyContent":"space-between","alignItems":"center"}}>
+            <div style={{'display':NotMobile?'flex':'block','justifyContent':'space-between','alignItems':'center'}}>
 
                 <ItemCounter
-                width={NotMobile?"35%":"100%"}
+                width={NotMobile?'35%':'100%'}
                 />
                 <br />
                 <Button 
                  icon={<BsCart3 />} 
                  label="Add to cart"
-                 styles={{"width":NotMobile?"60%":"100%"}}
+                 styles={{'width':NotMobile?'60%':'100%'}}
                  onClick={handleAddTOCart}
                 //  isLoading={true}
                  />

@@ -1,12 +1,12 @@
-import {createContext} from "react";
-import {cartType,userCartType} from "../App"
+import {createContext} from 'react';
+import {cartType,userCartType} from '../App'
 
 interface AppcontextType{
-"cartState":{
+'cartState':{
     cart:cartType,
     setCart:(value:cartType)=>void;
     },
-    "userCartState":{
+    'userCartState':{
         userCartList:userCartType[],
         setUserCartList:(value:userCartType[])=>void;
     }

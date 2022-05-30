@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import {ItemCounterContainerType} from "./ItemCounter"
+import styled from 'styled-components';
+import {ItemCounterContainerType} from './ItemCounter'
 
 
 export const ItemCounterContainer = styled.div<ItemCounterContainerType>`
@@ -11,7 +11,7 @@ justify-content: space-between;
 align-items: center;
 padding: 1rem 1rem;
 border-radius: 10px;
-${(props)=>props.width?"width:"+props.width+";":""}
+${(props)=>props.width?'width:'+props.width+';':''}
 
 svg{
 color: ${({theme})=>theme.colors.primary.orange};

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import {ButtonStyleType} from "./Button"
+import styled from 'styled-components';
+import {ButtonStyleType} from './Button'
 
 
 
@@ -7,11 +7,11 @@ import {ButtonStyleType} from "./Button"
 export const ButtonStyle = styled.button<ButtonStyleType>`
 
 background-color: ${({theme})=>theme.colors.primary.orange};
-opacity: ${(props)=>props.isLoading?".7":"1"};
+opacity: ${(props)=>props.isLoading?'.7':'1'};
 border:transparent ;
 display: block;
 width: 100%;
-${(props)=>props.width?"width:"+props.width+";":""}
+${(props)=>props.width?'width:'+props.width+';':''}
 border-radius: 10px;
 padding: 1rem ;
 font-size: 1rem;

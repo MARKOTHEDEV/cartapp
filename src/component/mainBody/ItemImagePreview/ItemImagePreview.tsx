@@ -1,14 +1,11 @@
-import  {useState} from "react"
+import  {useState} from 'react'
 import {
     MainImageContainer,
     PreviewBoxContainer,ThumbNailImageContainer,
     ThunbNail,Container
-} from "./ItemImagePreview.style"
-import ShoeMainPics from "../../../asset/image-product-1.jpg"
-import LeftIcon from "../../../asset/icon-previous.svg";
-import RightIcon from "../../../asset/icon-next.svg";
-import {BiChevronLeft} from "react-icons/bi"
-import {BiChevronRight} from "react-icons/bi"
+} from './ItemImagePreview.style'
+import {BiChevronLeft} from 'react-icons/bi'
+import {BiChevronRight} from 'react-icons/bi'
 
 
 
@@ -29,7 +26,7 @@ export interface ThunbNailType{
     currentItem:number;   
 }
 
-const ItemImagePreview:React.FC<ItemImagePreviewType> = ({openModalPic,isInModalState=false})=>{
+const ItemImagePreview= ({openModalPic,isInModalState=false}:ItemImagePreviewType):React.ReactElement=>{
     
     const [slideIndex, setSlideIndex] = useState(1)
     const  MAX_PICS =4;
@@ -62,9 +59,9 @@ const ItemImagePreview:React.FC<ItemImagePreviewType> = ({openModalPic,isInModal
                     }
                 }} />
                 <PreviewBoxContainer isInModalState={isInModalState}>
-                    <BiChevronRight  onClick={(e)=>nextSlide()}/>
+                    <BiChevronRight  onClick={()=>nextSlide()}/>
 
-                    <BiChevronLeft onClick={(e)=>prevSlide()}/>
+                    <BiChevronLeft onClick={()=>prevSlide()}/>
                 </PreviewBoxContainer>
             </MainImageContainer>
 
@@ -73,7 +70,7 @@ const ItemImagePreview:React.FC<ItemImagePreviewType> = ({openModalPic,isInModal
             */}
             <ThumbNailImageContainer>
                 {[...new Array(4)].map((data,index)=>(
-                    <ThunbNail
+                    <ThunbNail key={index}
                      currentItem={slideIndex} 
                     onClick={()=>moveDot(index+1)}
                     >

@@ -1,7 +1,7 @@
 
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import { NavLinkPropType,UserImageContainerType } from "./Nav"
+import { NavLinkPropType,UserImageContainerType } from './Nav'
 
 
 export const NavContainer = styled.nav`
@@ -85,7 +85,7 @@ width: 50%;
 background-color: white;
 padding: 1.5rem;
 /* position: relative; */
-${ (props)=>props.hamburger?"transform: translateX(0);":"transform: translateX(-100%);"}
+${ (props)=>props.hamburger?'transform: translateX(0);':'transform: translateX(-100%);'}
 transition: all .4s ease-in-out;
 z-index: 40;
 ul{
@@ -213,7 +213,7 @@ position: relative;
 &:active{
     border: 1px solid  ${({theme})=>theme.colors.primary.orange};
 }
-${(props)=>props.isActive?`border: 1px solid ${props.theme.colors.primary.orange};`:""}
+${(props)=>props.isActive?`border: 1px solid ${props.theme.colors.primary.orange};`:''}
 
 @media screen and (min-width: 700px) {
     width:50px;

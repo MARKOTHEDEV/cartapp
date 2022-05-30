@@ -1,6 +1,6 @@
-import styled,{css} from "styled-components"
+import styled,{css} from 'styled-components'
 import {PreviewBoxContainerType,ThunbNailType
-} from "./ItemImagePreview"
+} from './ItemImagePreview'
 
 export const MakeImageFitpage= css`
  width: 100%;
@@ -80,7 +80,7 @@ export const PreviewBoxContainer = styled.div<PreviewBoxContainerType>`
  padding: 0 .5rem;
 
  ${(props)=>{
-     let newStyle =""
+     let newStyle =''
      if(props.isInModalState){
          newStyle =`
             top: 40%;

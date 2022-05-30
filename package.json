@@ -28,7 +28,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "lint": "eslint . --ext .tsx",
+    "lint-fix":"eslint . --ext  .tsx --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -70,7 +72,10 @@
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.11",
     "@types/react-modal": "^3.13.1",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
     "eslint": "^8.16.0",
+    "eslint-plugin-react": "^7.30.0",
     "webpack": "^5.72.0"
   }
 }
